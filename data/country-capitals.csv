@@ -1,0 +1,20 @@
+CountryName,CapitalName,CapitalLatitude,CapitalLongitude,CountryCode,ContinentName,TimeZone,Temperature,Pressure,Conditions,Humidity
+,,,,,,,,,,
+Brazil,Brasilia,-15.78333333,-47.916667,BR,South America,UTC-3,21,457,Sunny,12
+Colombia,Bogota,4.6,-74.083333,CO,South America,UTC-5,12,1866,Windy,20
+Egypt,Cairo,30.05,31.25,EG,Africa,UTC+2,14,1025,Sunny,12
+France,Paris,48.86666667,2.333333,FR,Europe,UTC+1,11,1123,Cloudy,25
+Iraq,Baghdad,33.33333333,44.4,IQ,Asia,UTC+3,13,678,Cloudy,45
+South Korea,Seoul,37.55,126.983333,KR,Asia,UTC+9,12,500,Windy,40
+Kosovo,Pristina,42.66666667,21.166667,KO,Europe,UTC+1,2,400,Snowy,35
+Mexico,Mexico City,19.43333333,-99.133333,MX,Central America,UTC-6,16,1058,Sunny,13
+Nepal,Kathmandu,27.71666667,85.316667,NP,Asia,UTC+5.75,13,1168,Sunny,19
+Portugal,Lisbon,38.71666667,-9.133333,PT,Europe,UTC+0,13,1895,Sunny,17
+United States,Washington DC,38.883333,-77,US,Central America,UTC-5,10,1356,Cloudy,55
+Uruguay,Montevideo,-34.85,-56.166667,UY,South America,UTC-3,12,887,Partly cloudy,20
+India,Delhi,28.7041,77.1025,IN,Asia,UTC+5.5,14,996,Sunny,5
+Australia,Canberra,-35.2809,149.13,AU,Australia,UTC+10,29,1142,Sunny,5
+New zealand,Wellington,-41.2865,174.7762,NZ,New zealand,UTC+12,15,1000,Windy,10
+Russia,Moscow,55.7558,37.6173,RU,Russia,UTC+3,-2,190,Snowy,20
+Canada,Ottawa,45.4215,-75.6972,CA,North America,UTC-5,5,1234,Windy,15
+Singapore,Singapore,1.3521,103.8198,SG,Asia,UTC+8,30,654,Sunny,5
