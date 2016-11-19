@@ -9,8 +9,10 @@
 		<h1>Welcome to weather simulation app</h1>
 	
 		<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" >
-			<p>Responsive D3 World Map with zoom and pan limits, graticule and equator lines, optimized TopoJSON with country names and colors, 
-				geo translation functions, geo coordinate plotting functions for points and text, weather data and much more. 
+			<p>Below is a tabular and geological representation of weather data of different cities across various
+			parts of the world. Below table data can be searched/sorted for country/capital name. Below table, a map
+			has been created using D3.js which repesents different capital across the globe. Hover over the cities to
+			see the weather data as a tooltip.
 			</p>
 		</div>
 		
@@ -22,23 +24,20 @@
 	</div>
 	
 	
-	<div id="container" ng-app="mapComponent" ng-controller="mapCtrl" >
-		
-	</div>
+	<div id="container" ng-app="mapComponent" ng-controller="mapCtrl" ></div>
 	
 	
 	
-	<!-- <script src="js/angular.min.js"></script> -->
+	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
 	<script src="js/d3.min.js"></script>
 	<script src="js/topojson.v1.min.js"></script>
-	<script src="js/weatherApp.js"></script>
-	<script src="js/sortApp.js"></script>
+	<script src="dist/prod/weather.component.min.js"></script>
 	
 	<!-- Latest compiled and minified bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="dist/prod/weather.component.min.css">
 	
 </body>
 </html>
