@@ -1,12 +1,10 @@
 "use strict";
 
-
-
 var sortApp = angular.module("sortApp", []);
 
 sortApp.controller('sortCtrl', ['$scope',
 	function($scope) {
-		
+		// mock data 
 		$scope.countries = [
 		  {
 			"CountryName": "Brazil",
@@ -248,9 +246,15 @@ sortApp.controller('sortCtrl', ['$scope',
 		$scope.sortType     = 'CountryName'; // set the default sort type
 		$scope.sortReverse  = false;  // set the default sort order
 		$scope.searchCountry   = '';     // set the default search/filter term
-		
 	}
 ]);
 
 
+sortApp.filter('convertToLocal', function () {
+    return function (input, states) {
+        return utcToLocal(input);
+    };
+})
+
+// bootstrap multiple ng-apps in single page angularjs
 angular.bootstrap(document.getElementById("countryTable"), ['sortApp']);

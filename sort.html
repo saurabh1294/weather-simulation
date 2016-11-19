@@ -1,9 +1,4 @@
 <div class="container-fluid col-lg-12 col-md-12 col-sm-12 top-margin" >
-			<!--div class="alert alert-info col-lg-12 col-md-12 col-sm-12">
-				<p>Sort Type: {[{ sortType }]}</p>
-				<p>Sort Reverse: {[{ sortReverse }]}</p>
-				<p>Search Query: {[{ searchEmployee }]}</p>
-			</div-->
 			<form>
 				<div class="form-group row" style="padding-left:1%;padding-right:1%;">
 					<div class="input-group col-lg-12 col-md-12 col-sm-12">
@@ -80,7 +75,7 @@
 						<td>{{ item.CountryName }}</td>
 						<td>{{ item.CapitalName }}</td>
 						<td>{{ item.CapitalLatitude}} | {{item.CapitalLongitude}}</td>
-						<td>utcToLocal({{item.TimeZone}})</td>
+						<td>{{item.TimeZone | convertToLocal}}</td>
 						<td>{{ item.Conditions }}</td>
 						<td>{{ item.Temperature }} °C</td>
 						<td>{{ item.Pressure }}</td>
