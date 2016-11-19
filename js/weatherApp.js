@@ -4,12 +4,32 @@
 
 var mapComponent = angular.module("mapComponent", []);
 
+function utcToLocal(timezone) {
+	// create Date object for current location
+	var d = new Date();
+
+	var offset = timezone.split("C")[1] ;
+	//+ timezone.split("C")[1].split(":")[1] / 60;
+	// convert to msec
+	// subtract local time zone offset
+	// get UTC time in msec
+	var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+
+	// create new Date object for different city
+	// using supplied offset
+	var nd = new Date(utc + (3600000*offset )); 
+
+	// return time as a string
+	return nd.toLocaleString();
+}
+
+
 
 
 
 mapComponent.controller('mapCtrl', ['$scope',
     function($scope) {
-
+		
         $scope.initMap = function() {
             d3.select(window).on("resize", throttle);
 
@@ -27,6 +47,7 @@ mapComponent.controller('mapCtrl', ['$scope',
 
             var tooltip = d3.select("#container").append("div").attr("class", "tooltip hidden");
 			
+		
 
             setup(width, height);
 
@@ -125,7 +146,6 @@ mapComponent.controller('mapCtrl', ['$scope',
                     });
 
                 });
-
             }
 
 
@@ -183,25 +203,7 @@ mapComponent.controller('mapCtrl', ['$scope',
             }
 
 			
-			function utcToLocal(timezone) {
-				// create Date object for current location
-				console.log(timezone.split("C")[1]);
-				var d = new Date();
-
-				var offset = timezone.split("C")[1] ;//+ timezone.split("C")[1].split(":")[1] / 60;
-				// convert to msec
-				// subtract local time zone offset
-				// get UTC time in msec
-				var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
-
-				// create new Date object for different city
-				// using supplied offset
-				var nd = new Date(utc + (3600000*offset));
-
-				// return time as a string
-				return nd.toLocaleString();
-			}
-
+			
             //function to add points and text to the map (used in plotting capitals)
             function addpoint(lat, lon, text, countryObj) {
                 var gpoint = g.append("g").attr("class", "gpoint");
@@ -213,7 +215,8 @@ mapComponent.controller('mapCtrl', ['$scope',
                     .attr("cy", y)
                     .attr("class", "point")
                     .attr("r", 1.5);
-
+					
+					
                 //conditional in case a point has no associated text
                 if (countryObj.CapitalName.length > 0) {
 					var data = "Country : "+countryObj.CountryName + "<br/>"+
@@ -222,7 +225,7 @@ mapComponent.controller('mapCtrl', ['$scope',
 								"Temperature : "+countryObj.Temperature+ "°C<br/>"+
 								"Pressure : "+countryObj.Pressure+ "<br/>"+
 								"Conditions : "+countryObj.Conditions+ "<br/>"+
-								"Humidity : "+countryObj.Humidity+ "<br/>";
+								"Humidity : "+countryObj.Humidity+ "%<br/>";
 						gpoint.append("text")
                         .attr("x", x + 2)
                         .attr("y", y + 2)
@@ -241,6 +244,7 @@ mapComponent.controller('mapCtrl', ['$scope',
 							tooltip.classed("hidden", false)
                             .attr("style", "left:" + (mouse[0] + offsetL) + "px;top:" + (mouse[1] + offsetT) + "px")
                             .html(data);
+							console.log(countryObj);
 							})					
 						.on("mouseout", function(d) {		
 							tooltip.classed("hidden", true);

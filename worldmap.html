@@ -17,15 +17,27 @@
 	
 	</div>
 	
-	<div id="container" ng-app="mapComponent" ng-controller="mapCtrl" ></div>
+	<div id="countryTable" ng-app="sortApp" ng-controller="sortCtrl"  
+	ng-include="'sort.html'">
+	</div>
 	
+	
+	<div id="container" ng-app="mapComponent" ng-controller="mapCtrl" >
+		
+	</div>
+	
+	
+	
+	<!-- <script src="js/angular.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
 	<script src="js/d3.min.js"></script>
 	<script src="js/topojson.v1.min.js"></script>
-	<script src="js/angular.min.js"></script>
 	<script src="js/weatherApp.js"></script>
+	<script src="js/sortApp.js"></script>
 	
 	<!-- Latest compiled and minified bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	
 </body>

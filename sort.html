@@ -1,0 +1,91 @@
+<div class="container-fluid col-lg-12 col-md-12 col-sm-12 top-margin" >
+			<!--div class="alert alert-info col-lg-12 col-md-12 col-sm-12">
+				<p>Sort Type: {[{ sortType }]}</p>
+				<p>Sort Reverse: {[{ sortReverse }]}</p>
+				<p>Search Query: {[{ searchEmployee }]}</p>
+			</div-->
+			<form>
+				<div class="form-group row" style="padding-left:1%;padding-right:1%;">
+					<div class="input-group col-lg-12 col-md-12 col-sm-12">
+						<div class="input-group-addon"><i class="fa fa-search"></i></div>
+						<input type="text" class="form-control" placeholder="Search Location" ng-model="searchCountry">
+					</div>
+				</div>
+			</form>
+			<table class="table table-bordered table-striped table-responsive">
+				<thead>
+					<tr>
+						<td>
+							<a href="#" ng-click="sortType = 'CountryName'; sortReverse = !sortReverse">
+							Country 
+							<span ng-show="sortType == 'CountryName' && !sortReverse" class="fa fa-caret-down"></span>
+							<span ng-show="sortType == 'CountryName' && sortReverse" class="fa fa-caret-up"></span>
+							</a>
+						</td>
+					
+						<td>
+							<a href="#" ng-click="sortType = 'CountryName'; sortReverse = !sortReverse">
+							Location 
+							<span ng-show="sortType == 'CountryName' && !sortReverse" class="fa fa-caret-down"></span>
+							<span ng-show="sortType == 'CountryName' && sortReverse" class="fa fa-caret-up"></span>
+							</a>
+						</td>
+						<td>
+							<a href="#" ng-click="sortType = 'CapitalName'; sortReverse = !sortReverse">
+							Position
+							<span ng-show="sortType == 'CapitalName' && !sortReverse" class="fa fa-caret-down"></span>
+							<span ng-show="sortType == 'CapitalName' && sortReverse" class="fa fa-caret-up"></span>
+							</a>
+						</td>
+						<td>
+							<a href="#" ng-click="sortType = 'CapitalName'; sortReverse = !sortReverse">
+							Localtime
+							<span ng-show="sortType == 'CapitalName' && !sortReverse" class="fa fa-caret-down"></span>
+							<span ng-show="sortType == 'CapitalName' && sortReverse" class="fa fa-caret-up"></span>
+							</a>
+						</td>
+						<td>
+							<a href="#" ng-click="sortType = 'CapitalName'; sortReverse = !sortReverse">
+							Conditions
+							<span ng-show="sortType == 'CapitalName' && !sortReverse" class="fa fa-caret-down"></span>
+							<span ng-show="sortType == 'CapitalName' && sortReverse" class="fa fa-caret-up"></span>
+							</a>
+						</td>
+						<td>
+							<a href="#" ng-click="sortType = 'CapitalName'; sortReverse = !sortReverse">
+							Temperature
+							<span ng-show="sortType == 'CapitalName' && !sortReverse" class="fa fa-caret-down"></span>
+							<span ng-show="sortType == 'CapitalName' && sortReverse" class="fa fa-caret-up"></span>
+							</a>
+						</td>
+						<td>
+							<a href="#" ng-click="sortType = 'CapitalName'; sortReverse = !sortReverse">
+							Pressure
+							<span ng-show="sortType == 'CapitalName' && !sortReverse" class="fa fa-caret-down"></span>
+							<span ng-show="sortType == 'CapitalName' && sortReverse" class="fa fa-caret-up"></span>
+							</a>
+						</td>
+						<td>
+							<a href="#" ng-click="sortType = 'CapitalName'; sortReverse = !sortReverse">
+							Humidity
+							<span ng-show="sortType == 'CapitalName' && !sortReverse" class="fa fa-caret-down"></span>
+							<span ng-show="sortType == 'CapitalName' && sortReverse" class="fa fa-caret-up"></span>
+							</a>
+						</td>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr ng-repeat="item in countries | orderBy:sortType:sortReverse | filter:searchCountry">
+						<td>{{ item.CountryName }}</td>
+						<td>{{ item.CapitalName }}</td>
+						<td>{{ item.CapitalLatitude}} | {{item.CapitalLongitude}}</td>
+						<td>utcToLocal({{item.TimeZone}})</td>
+						<td>{{ item.Conditions }}</td>
+						<td>{{ item.Temperature }} °C</td>
+						<td>{{ item.Pressure }}</td>
+						<td>{{ item.Humidity }} %</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
