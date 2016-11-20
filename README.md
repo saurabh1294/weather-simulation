@@ -2,6 +2,9 @@ This is a simple app using D3.js and angular to show/plot weather data across di
 parts of the globe. It's been developed using D3.js and AngularJS. The data shown is fake i.e
 simulated. Only time and latitude/longitude of different locations is real
 
+
+
+
 Setup instructions:-
 
 
@@ -24,7 +27,12 @@ production deployment.
 
 
 
+
+
+
+
 For running tests:-
+
 Install and setup jasmine and karma using the below commands
 
 
