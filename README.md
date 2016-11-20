@@ -1,9 +1,13 @@
 This is a simple app using D3.js and angular to show/plot weather data across different
 parts of the globe. It's been developed using D3.js and AngularJS
 
-Setup instructions
+Setup instructions:-
+
+
 Install nodejs from http://nodejs.org
 Pull the github code from this repo and run the below commands for build and npm tools setup
+
+
 
 npm install
 grunt default - this will run the default grunt tasks
@@ -11,8 +15,12 @@ grunt dev - this will create dev versions of the js and css files in dist/dev fo
 grunt prod - this will create minified and uglified js and css files in dist/prod folder for
 production deployment.
 
+
+
 For running tests:-
 Install and setup jasmine and karma using the below commands
+
+
 
 npm install -g karma-cli
 npm install karma jasmine karma-jasmine --save-dev
@@ -24,8 +32,14 @@ Run test cases using the command:- karma start
 
 
 
+
+
 To launch the app type the below link in browser if running locally
+
+
 http://localhost:8080//weather-simulation/
+
+
 
 Below is the demo hosted publically 
 
