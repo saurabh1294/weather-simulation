@@ -239,7 +239,7 @@
 	  
     // test cases
     it('match data', function() {
-		
+		console.log("Running UI test cases");
 		for (var index = 0; index < weatherData.length; index++) {
 			var country = $("td:nth-child(0):eq("+index+")"),
 				capital = $("td:nth-child(1):eq("+index+")"),

@@ -18,8 +18,12 @@
     "grunt-contrib-uglify": "~1.0.1",
     "grunt-contrib-watch": "latest",
     "grunt-sass": "latest",
-	"webdriver-manager": "latest",
-	"protractor": "latest"
+    "jasmine": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2",
+    "protractor": "latest",
+    "webdriver-manager": "latest"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
