@@ -1,3 +1,9 @@
+.country-table .align-center {
+	padding-left:1%;
+	padding-right:1%;
+}
+
+
 .top-margin {
 	margin-top:5%;
 }
@@ -6,10 +12,12 @@
     stroke: #fff;
     stroke-width: 1.5px;
 }
+
 .text {
     font-size: 14px;
     text-transform: capitalize;
 }
+
 #container {
     margin: 10px 10%;
     border: 2px solid #000;
@@ -18,10 +26,14 @@
     overflow: hidden;
     background: #F0F8FF;
 }
+
+
 .hidden {
     display: none;
 }
-div.tooltip {
+
+
+.tooltip {
     color: #222;
     background: #fff;
     padding: .5em;
@@ -31,12 +43,16 @@ div.tooltip {
     opacity: 0.9;
     position: absolute;
 }
+
+
 .graticule {
     fill: none;
     stroke: #bbb;
     stroke-width: .5px;
     stroke-opacity: .5;
 }
+
+
 .equator {
     stroke: #ccc;
     stroke-width: 1px;
