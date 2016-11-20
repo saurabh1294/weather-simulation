@@ -1,10 +1,11 @@
 This is a simple app using D3.js and angular to show/plot weather data across different
-parts of the globe. It's been developed using D3.js and AngularJS
+parts of the globe. It's been developed using D3.js and AngularJS. The data shown is fake i.e
+simulated. Only time and latitude/longitude of different locations is real
 
 Setup instructions:-
 
 
-Install nodejs from http://nodejs.org
+Install nodejs/npm package manager from http://nodejs.org
 Pull the github code from this repo and run the below commands for build and npm tools setup
 
 
