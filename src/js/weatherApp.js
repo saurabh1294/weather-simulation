@@ -4,7 +4,9 @@
 
 var mapComponent = angular.module("mapComponent", []);
 
-function utcToLocal(timezone) {
+
+var utcToLocal = function(timezone){
+	
 	// create Date object for current location
 	var d = new Date();
 
@@ -21,7 +23,11 @@ function utcToLocal(timezone) {
 
 	// return time as a string
 	return nd.toLocaleString();
-}
+
+};
+
+
+
 
 
 

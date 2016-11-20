@@ -12,7 +12,7 @@ sortApp.controller('sortCtrl', ['$scope',
 			"CapitalLatitude": "-15.78333333",
 			"CapitalLongitude": "-47.916667",
 			"CountryCode": "BR",
-			"ContinentName": "South;America",
+			"ContinentName": "South America",
 			"TimeZone": "UTC-3",
 			"Temperature": "21",
 			"Pressure": "457",
@@ -25,7 +25,7 @@ sortApp.controller('sortCtrl', ['$scope',
 			"CapitalLatitude": "4.6",
 			"CapitalLongitude": "-74.083333",
 			"CountryCode": "CO",
-			"ContinentName": "South;America",
+			"ContinentName": "South America",
 			"TimeZone": "UTC-5",
 			"Temperature": "12",
 			"Pressure": "1866",
@@ -72,7 +72,7 @@ sortApp.controller('sortCtrl', ['$scope',
 			"Humidity": "45"
 		  },
 		  {
-			"CountryName": "South;Korea",
+			"CountryName": "South Korea",
 			"CapitalName": "Seoul",
 			"CapitalLatitude": "37.55",
 			"CapitalLongitude": "126.983333",
@@ -99,11 +99,11 @@ sortApp.controller('sortCtrl', ['$scope',
 		  },
 		  {
 			"CountryName": "Mexico",
-			"CapitalName": "Mexico;City",
+			"CapitalName": "Mexico City",
 			"CapitalLatitude": "19.43333333",
 			"CapitalLongitude": "-99.133333",
 			"CountryCode": "MX",
-			"ContinentName": "Central;America",
+			"ContinentName": "Central America",
 			"TimeZone": "UTC-6",
 			"Temperature": "16",
 			"Pressure": "1058",
@@ -137,12 +137,12 @@ sortApp.controller('sortCtrl', ['$scope',
 			"Humidity": "17"
 		  },
 		  {
-			"CountryName": "United;States",
-			"CapitalName": "Washington;DC",
+			"CountryName": "United States",
+			"CapitalName": "Washington DC",
 			"CapitalLatitude": "38.883333",
 			"CapitalLongitude": "-77",
 			"CountryCode": "US",
-			"ContinentName": "Central;America",
+			"ContinentName": "Central America",
 			"TimeZone": "UTC-5",
 			"Temperature": "10",
 			"Pressure": "1356",
@@ -155,11 +155,11 @@ sortApp.controller('sortCtrl', ['$scope',
 			"CapitalLatitude": "-34.85",
 			"CapitalLongitude": "-56.166667",
 			"CountryCode": "UY",
-			"ContinentName": "South;America",
+			"ContinentName": "South America",
 			"TimeZone": "UTC-3",
 			"Temperature": "12",
 			"Pressure": "887",
-			"Conditions": "Partly;cloudy",
+			"Conditions": "Partly Cloudy",
 			"Humidity": "20"
 		  },
 		  {
@@ -189,12 +189,12 @@ sortApp.controller('sortCtrl', ['$scope',
 			"Humidity": "5"
 		  },
 		  {
-			"CountryName": "New;zealand",
+			"CountryName": "New Zealand",
 			"CapitalName": "Wellington",
 			"CapitalLatitude": "-41.2865",
 			"CapitalLongitude": "174.7762",
 			"CountryCode": "NZ",
-			"ContinentName": "New;zealand",
+			"ContinentName": "New Zealand",
 			"TimeZone": "UTC+13",
 			"Temperature": "15",
 			"Pressure": "1000",
@@ -220,7 +220,7 @@ sortApp.controller('sortCtrl', ['$scope',
 			"CapitalLatitude": "45.4215",
 			"CapitalLongitude": "-75.6972",
 			"CountryCode": "CA",
-			"ContinentName": "North;America",
+			"ContinentName": "North America",
 			"TimeZone": "UTC-5",
 			"Temperature": "5",
 			"Pressure": "1234",
@@ -250,11 +250,11 @@ sortApp.controller('sortCtrl', ['$scope',
 ]);
 
 
-sortApp.filter('convertToLocal', function () {
+sortApp.filter('convertToLocal', ['$timeout', function ($timeout) {
     return function (input, states) {
         return utcToLocal(input);
     };
-})
+}]);
 
 // bootstrap multiple ng-apps in single page angularjs
 angular.bootstrap(document.getElementById("countryTable"), ['sortApp']);
