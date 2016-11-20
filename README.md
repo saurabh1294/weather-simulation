@@ -30,10 +30,14 @@ Install and setup jasmine and karma using the below commands
 
 
 npm install -g karma-cli
+
 npm install karma jasmine karma-jasmine --save-dev
+
 karma init - to create karma.conf.js (refer the karma.conf.js in the repo for resolving standard
 library dependencies like angular jquery etc.)
-Run test cases using the command:- karma start
+
+Run test cases using the command:- 
+karma start
 
 
 
